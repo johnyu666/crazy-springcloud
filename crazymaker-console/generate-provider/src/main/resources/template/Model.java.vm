@@ -1,0 +1,32 @@
+package
+
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+
+${package}.${moduleName}.model;
+    ${package}.common.model.SuperEntity;
+#if(${hasBigDecimal})
+#end
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @date ${datetime}
+ */
+@Getter
+@Setter
+@EqualsAndHashCode(callSuper = false)
+@TableName("${tableName}" )
+public class ${className} extends SuperEntity{
+private static final long serialVersionUID=1L;
+
+#foreach ($column in $columns)
+    #if($column.columnName != $pk.columnName && $column.columnName != "createTime" && $column.columnName !=
+        "updateTime")
+    private $column.attrType $column.attrname;
+    #end
+#end
+}

@@ -1,0 +1,26 @@
+package
+
+import com.crazymaker.springcloud.common.page.PageOut;
+
+import java.util.Map;
+
+${package}.${moduleName}.service;
+    ${package}.${moduleName}.model.${className};
+    ${package}.common.service.ISuperService;
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @date ${datetime}
+ */
+public interface I${className}Service
+{
+    /**
+     * 列表
+     * @param params
+     * @return
+     */
+    PageOut<${className}> findList(Map<String, Object> params);
+}
+

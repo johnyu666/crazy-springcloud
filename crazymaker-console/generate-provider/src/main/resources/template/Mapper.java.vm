@@ -1,0 +1,28 @@
+package
+
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.central.db.mapper.SuperMapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+import java.util.Map;
+
+${package}.${moduleName}.mapper;
+    ${package}.${moduleName}.model.${className};
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @date ${datetime}
+ */
+public interface ${className}Mapper extends SuperMapper<${className}>
+{
+    /**
+     * 分页查询用户列表
+     * @param page
+     * @param params
+     * @return
+     */
+    List<${className}> findList(Page<${className}> page, @Param("p") Map<String, Object> params);
+}
