@@ -13,6 +13,7 @@
     <artifactId>base-runtime</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-httpclient -->
         <dependency>
@@ -64,9 +65,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.crazymaker.springcloud</groupId>
             <artifactId>base-common</artifactId>
-            <version>${env.version}</version>
+            <groupId>com.crazymaker.springcloud</groupId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <!--hystrix-->
